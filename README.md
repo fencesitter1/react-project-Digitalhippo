@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
+toc:
+  depth_from: 1
+  depth_to: 3
+  ordered: false
 
-## Getting Started
+---
 
-First, run the development server:
+# Table of Content
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[toc]
+
+# DigitalHippo
+
+react notes of React project:digital hippo
+
+# source
+
+from youtuber Josh 
+[Build a Complete Digital Marketplace with Next.js 14, React, tRPC, Tailwind | Full Course 2023](https://www.youtube.com/watch?v=06g6YJ6JCJU&t=327s)
+
+# Getting started
+
+## initialization
+
+- Initialization project
+
+```shell
+$ npx create-next-app@latest digitalhippo
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - options
+    √ Would you like to use TypeScript? ... No / **Yes**
+      √ Would you like to use ESLint? ... No / **Yes**
+      √ Would you like to use Tailwind CSS? ... No / **Yes**
+      √ Would you like to use `src/` directory? ... No / **Yes**
+      √ Would you like to use App Router? (recommended) ... No / **Yes**
+      √ Would you like to customize the default import alias (@/*)? ... **No** / Yes
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Start the server
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  ```shell 
+  yarn dev
+  ```
 
-## Learn More
+  If an error about yarn occurs,you should install yarn first.
 
-To learn more about Next.js, take a look at the following resources:
+  ```shell 
+  npm install -g yarn
+  ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- open the local link
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+  http://localhost:xxxx
 
-## Deploy on Vercel
+- Clear the initial page content
+  `src/app/page.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  ```tsx
+  export default function Home() {
+  return (
+    <p>hello world</p>
+  )
+  }
+  ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - Tip: Quickly select all content of the HTML element near the cursor
+    Search `emmet:balance(outward)`and set this shortcut in the VSCode keyboard shortcuts settings
+
+- install shadcn/ui library
+
+  ```shell
+  npx shadcn-ui@latest init
+  ```
+
+  - options
+    √ Would you like to use TypeScript (recommended)? ... no / **yes**
+    √ Which style would you like to use? » Default
+    √ Which color would you like to use as base color? » Slate
+    √ Where is your global CSS file? ... app/globals.css
+    √ Would you like to use CSS variables for colors? ... no / **yes**
+    √ Are you using a custom tailwind prefix eg. tw-? (Leave blank if not) ...     
+    √ Where is your tailwind.config.js located? ... tailwind.config.js
+    √ Configure the import alias for components: ... @/components
+    √ Configure the import alias for utils: ... @/lib/utils
+    √ Are you using React Server Components? ... no / **yes**
+    √ Write configuration to components.json. Proceed? ... **yes**
+    Keep the default and YES option
+
+# 11:17 - Making this look good right away
+
+## Modify in layout.tsx
+
+[layout](./src/app/layout.tsx) 
+
+## create MaxWidthWrapper component
+
+The [MaxWidthWrapper](./src/components/MaxWidthWrapper.tsx) component provides a styled container with a maximum width and specific padding, ensuring consistent layout across different devices.
+
+## change the theme of shadcn/ui
+
+- [shadcn/ui/themes](https://ui.shadcn.com/themes) select your theme 
+- copy the code 
+- replace corresponding part in [globals.css](./src/app/globals.css)
+
