@@ -105,3 +105,5 @@ The [MaxWidthWrapper](./src/components/MaxWidthWrapper.tsx) component provides a
 - copy the code 
 - replace corresponding part in [globals.css](./src/app/globals.css)
 
+# 25:05 - Creating our landing page
+
