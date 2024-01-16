@@ -91,14 +91,16 @@ $ npx create-next-app@latest digitalhippo
 
 ## Modify in layout.tsx
 
-[layout](./src/app/layout.tsx) 
+[layout](./src/app/layout.tsx#L19) 
 
 ## create MaxWidthWrapper component
-
+- main function 
 The [MaxWidthWrapper](./src/components/MaxWidthWrapper.tsx) component provides a styled container with a maximum width and specific padding, ensuring consistent layout across different devices.
 
-## change the theme of shadcn/ui
+- Import as a parent component in the homepage
+[page](./src/app/page.tsx#L6)
 
+## change the theme of shadcn/ui
 - [shadcn/ui/themes](https://ui.shadcn.com/themes) select your theme 
 - copy the code 
 - replace corresponding part in [globals.css](./src/app/globals.css)
