@@ -95,7 +95,7 @@ $ npx create-next-app@latest digitalhippo
 
 ## create MaxWidthWrapper component
 - main function 
-The [MaxWidthWrapper](./src/components/MaxWidthWrapper.tsx) component provides a styled container with a maximum width and specific padding, ensuring consistent layout across different devices.
+The [MaxWidthWrapper](./src/components/maxWidthWrapper.tsx) component provides a styled container with a maximum width and specific padding, ensuring consistent layout across different devices.
 
 - Import as a parent component in the homepage
 
@@ -191,7 +191,7 @@ https://ui.shadcn.com/docs/components/button
 npx shadcn-ui@latest add button
 ```
 
-[button.tsx](src\components\ui\button.tsx) files will be generated.
+[button.tsx](src/components/ui/button.tsx) file will be generated.
 
 ### Usage
 
@@ -272,7 +272,7 @@ Icon: ArrowDownToLine,
 
 - code
 
-[hero component ](src\app\page.tsx#L29)
+[hero component ](src/app/page.tsx#L29)
 
 ## Strength/ advantage
 
@@ -282,7 +282,7 @@ Icon: ArrowDownToLine,
 
 - code
 
-[Icons:some call to actions](src\app\page.tsx#L40)
+[Icons:some call to actions](src/app/page.tsx#L40)
 
-[Todo:Specific advantage introduction](src\app\page.tsx#L53)
+[Todo:Specific advantage introduction](src/app/page.tsx#L53)
 
