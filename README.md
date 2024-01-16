@@ -8,7 +8,33 @@ toc:
 
 # Table of Content
 
-[toc]
+- [Table of Content](#table-of-content)
+- [DigitalHippo](#digitalhippo)
+- [source](#source)
+- [Getting started](#getting-started)
+  - [initialization](#initialization)
+- [11:17 - Making this look good right away](#1117---making-this-look-good-right-away)
+  - [Modify in layout.tsx](#modify-in-layouttsx)
+  - [create MaxWidthWrapper component](#create-maxwidthwrapper-component)
+  - [change the theme of shadcn/ui](#change-the-theme-of-shadcnui)
+- [25:05 - Creating our landing page](#2505---creating-our-landing-page)
+  - [tailwind css style](#tailwind-css-style)
+    - [Letter Spacing](#letter-spacing)
+  - [different device ,different flex discharge](#different-device-different-flex-discharge)
+    - [different style of regular ,small and large device](#different-style-of-regular-small-and-large-device)
+  - [Add button style of shandcn/ui library](#add-button-style-of-shandcnui-library)
+    - [Installtion](#installtion)
+    - [Usage](#usage)
+    - [Link](#link)
+  - [arrows](#arrows)
+  - [Lucide icon library](#lucide-icon-library)
+    - [Installtion](#installtion-1)
+    - [Usage](#usage-1)
+  - [hero part](#hero-part)
+  - [Strength/ advantage](#strength-advantage)
+- [test](#test)
+
+
 
 # DigitalHippo
 
@@ -286,3 +312,4 @@ Icon: ArrowDownToLine,
 
 [Todo:Specific advantage introduction](src/app/page.tsx#L53)
 
+# test
