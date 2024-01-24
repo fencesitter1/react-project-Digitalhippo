@@ -144,7 +144,7 @@ So, `sm:text-6xl` means that the text will have a font size of `4rem` (`64px`) o
 
 ![image-20240116190413866](https://cdn.jsdelivr.net/gh/fencesitter1/pictures/img/2024/01/16/image-20240116190413866_19-10-10.png)
 
-- text-muted-foreground
+
 
 ## different device ,different flex discharge
 
@@ -268,9 +268,9 @@ import { ArrowDownToLine } from 'lucide-react';
 Icon: ArrowDownToLine,
 ```
 
-- keyshortcut:`alt+shift+↓`
+### keyshortcut:`alt+shift+↓`
 
-  ​	Copy throughout the section fastly
+​	Copy throughout the section fastly
 
 ## hero part
 
@@ -317,6 +317,8 @@ Icon: ArrowDownToLine,
 - need to add line:"use client"
 
 ​		You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client", so they're Server Components by default.
+
+- create `src/components/navItem.tsx` [navItem.tsx](src/components/navItem.tsx)
 
 ## Server Components and Client Components
 
@@ -535,6 +537,65 @@ export const useOnClickOutside = <T extends HTMLElement = HTMLElement>(
 
 
 # 1:32:44 - Creating our shopping cart
+
+## steps &&code file
+
+- src/components/cart.tsx [cart.tsx](src/components/cart.tsx)
+- `npx shadcn-ui@latest add sheet`
+- `npx shadcn-ui@latest add separator`
+
+## Sheet-Dialog component
+
+[doc/sheet](https://ui.shadcn.com/docs/components/sheet)
+
+## css-style
+
+- text-muted-foreground
+
+## Conditional check-Is it empty in the shopping cart
+
+## Properly format price
+
+[formatPrice](src/lib/utils.ts)
+
+```tsx
+export const formatPrice = (
+  price: number | string,
+  options: {
+    currency?: 'USD' | 'CNY' | 'EUR' | 'GBP';
+    notation?: Intl.NumberFormatOptions['notation'];
+  } = {}
+) => {
+  const { currency = 'CNY', notation = 'compact' } = options;
+  const numbericPrice = Number(price);
+
+  return new Intl.NumberFormat('zh-CN', {
+    style: 'currency',
+    currency,
+    notation,
+    maximumFractionDigits: 2,
+  }).format(numbericPrice);
+};	
+```
+
+
+
+## props:asChild
+
+In total,the `asChild` prop in Radix primitives allows you to apply Radix's functionality to different element types or custom React components. When `asChild` is set to `true`, Radix doesn't render a default DOM element. Instead, it clones the child of the part and passes Our customized  props and behavior to make it functional.
+
+[radix-ref-asChild](https://www.radix-ui.com/primitives/docs/guides/composition)
+
+##  [statically imported](https://nextjs.org/docs/app/building-your-application/optimizing/images#local-images) image file
+
+- error
+
+**Error****:** **Failed to parse src "public/hippo-empty-cart.png" on `next/image`, if using relative image it must start with a leading slash "/" or be an absolute URL (http:// or https://)**
+
+- solution
+
+~~src="public/hippo-empty-cart.png"~~ -->`src="/hippo-empty-cart.png"`
+
 # 1:55:55 - Setting up our server
 # 2:14:30 - Setting up our admin dashboard
 # 2:34:39 - How do we handle the auth flow?
